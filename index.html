@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <!-- 讓瀏覽器更快找到你的網頁 -->
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="瀏覽器查找的網頁列表下的註解" />
+    <meta name="author" content="ZT Zhuo" />
+    <!-- 常見轉跳頁面的代碼為_self -->
+    <base target="_blank" />
+    <!-- 瀏覽器的icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- <link rel="shortcut icon" href="" />
+    <link rel="bookmark" href="" /> -->
+  </head>
+  <body>
+    <header>
+      <h1>ZT Zhuo's Todo List</h1>
+    </header>
+
+    <form>
+      <input type="text" />
+      <!-- 因表單處理邏輯是依賴 JavaScript 來自動提交或者處理數據，並且使用preventDefault();阻止 HTML 的原生表單驗證
+      所以卡上下限沒有用 -->
+      <input type="number" min="1" max="12" placeholder="M" required />
+      <input type="number" min="1" max="31" placeholder="D" required />
+      <!-- type為number會在輸入時允許「可能構成合法數字」的字元，例如0–9、-（負號）、.（小數點）、e / E（科學記號)，其他字元則連輸入都不行 -->
+      <button type="submit">Add into list</button>
+    </form>
+    <br />
+    <br />
+    <div class="sort">
+      <button>Sort By Time</button>
+    </div>
+
+    <section></section>
+  </body>
+  <!-- <script src="./try.js"></script> -->
+  <script src="./app.js"></script>
+</html>
